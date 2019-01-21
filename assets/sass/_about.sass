@@ -1,0 +1,66 @@
+#about
+    padding-top: 15vh
+
+    .container-fluid
+        &#desc
+            background-color: #f3f3f3
+
+            padding-top: 30px
+            padding-bottom: 30px
+
+            .container
+                .row
+                    .left
+                        img
+                            width: 100%
+
+                    .right
+                        p
+                            color: $gray-light
+
+    .container
+        &#why-us
+            padding-top: 50px
+            padding-bottom: 50px
+
+            .heading
+                text-align: center
+
+                padding-bottom: 30px
+
+            .body
+                .row
+                    .item
+                        margin-bottom: 30px
+
+                        .inner
+                            padding: 15px
+
+                            @include transition(300ms)
+
+                            h3
+                                margin-bottom: 15px
+
+                                @include transition(300ms)
+
+                            p
+                                color: $gray-light
+
+                                margin-bottom: 30px
+
+                                @include transition(300ms)
+
+                            .mask
+                                width: 100%
+                                height: 230px
+
+                        &:hover
+                            .inner
+                                background-color: $primary
+
+                                @include transition(300ms)
+
+                                h3, p
+                                    color: #fff
+
+                                    @include transition(300ms)

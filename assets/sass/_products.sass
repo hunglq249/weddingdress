@@ -1,0 +1,375 @@
+#products
+    padding-top: 15vh
+
+    .content
+        .row
+            .left
+                #sideBar
+                    .card
+                        border: none
+
+                        .card-header
+                            background-color: transparent
+                            border-bottom: 1px solid $gray
+
+                            h5
+                                button
+                                    &.btn-link
+                                        color: $gray
+
+                        .card-body
+                            .item
+                                font-family: "Roboto", sans-serif
+
+                                margin-bottom: 15px
+
+                                .item-head
+                                    padding-bottom: 7px
+                                    margin-bottom: 15px
+
+                                    font-size: 1.25rem
+
+                                    color: $gray-light
+                                    border-bottom: 1px solid $gray-light
+
+                                .item-body
+                                    .form-check
+                                        .form-check-label
+                                            color: $gray-light
+
+                    &.active
+                        position: sticky
+                        position: -webkit-sticky
+                        top: 20vh
+
+            .right
+                .grid
+                    .grid-sizer, .grid-item
+                        width: 50%
+
+                    .grid-item
+                        float: left
+
+                        padding-left: 15px
+                        padding-right: 15px
+
+                        margin-bottom: 30px
+
+                        &.grid-item-mt
+                            margin-top: 40px
+
+                        .image
+                            width: 100%
+                            height: 50vh
+
+                            position: relative
+
+                            .mask
+                                width: 80%
+                                height: 100%
+
+                                img
+                                    @include transition(300ms)
+
+                            .name
+                                width: 100%
+                                height: 50px
+
+                                position: absolute
+                                top: 0
+                                left: 100%
+
+                                color: $gray-light
+
+                                @include rotateZ(90deg, top, left)
+
+                        .content
+                            padding-top: 15px
+
+                            h4
+                                a
+                                    color: $gray
+
+                                    &:hover
+                                        color: $primary
+                                        text-decoration: none
+
+                            h6
+                                color: #ccc
+                                font-family: "Roboto", sans-serif
+
+                            .price
+                                font-family: "Roboto", sans-serif
+                                font-size: 1.125rem
+
+                                span
+                                    display: block
+
+                                    color: $gray
+
+                                    small
+                                        color: $gray-light
+                                        text-decoration: line-through
+
+                        &:hover
+                            .mask
+                                img
+                                    @include scale(1.1, 1.1)
+                                    @include transition(300ms)
+
+#detail-product
+    .container
+        &#detail
+            padding-top: 20vh
+
+            .row
+                padding-bottom: 50px
+
+                .left
+                    height: 80vh
+
+                    .slider-product
+                        display: flex
+                        flex-direction: row
+
+                        height: 100%
+
+                        ul
+                            padding-left: 0
+                            list-style: none
+
+                            &.slides
+                                width: 80%
+                                height: 100%
+
+                                position: relative
+
+                                li
+                                    width: 100%
+                                    height: 100%
+
+                                    position: absolute
+                                    top: 0
+                                    left: 0
+                                    z-index: 1
+
+                                    &:target
+                                        z-index: 3
+                                        -webkit-animation: slide 1s 1
+
+                                    &:not(:target)
+                                        -webkit-animation: hidden 1s 1
+
+                                    img
+                                        width: 100%
+                                        height: 100%
+                                        object-fit: cover
+
+                            &.thumbnails
+                                width: calc(20% - 15px)
+                                height: 100%
+
+                                margin-right: 15px
+
+                                overflow: scroll
+
+                                li
+                                    width: 100%
+                                    height: 20%
+
+                                    a
+                                        img
+                                            width: 100%
+                                            height: 100%
+                                            object-fit: cover
+
+                        @keyframes slide
+                            0%
+                                transform: translateY(-100%)
+
+                            100%
+                                transform: translateY(0%)
+
+
+                        @keyframes hidden
+                            0%
+                                z-index: 2
+
+                            100%
+                                z-index: 2
+
+                .right
+                    .content
+                        display: flex
+                        flex-direction: column
+
+                        .item
+                            width: 100%
+
+                            padding-top: 15px
+                            padding-bottom: 15px
+
+                            border-bottom: 1px solid $gray-light
+
+                            &:last-of-type
+                                border-bottom: none
+
+                            h5
+                                font-family: "Roboto", sans-serif
+
+                            table
+                                margin-top: 30px
+
+                                td
+                                    padding: 7px 0
+
+                                    span
+                                        font-family: "Roboto", sans-serif
+
+                            &.overall
+                                h4
+                                    margin-bottom: 30px
+
+                                .code
+                                    font-family: "Roboto", sans-serif
+                                    color: $gray-light
+
+                                table
+                                    margin-top: 30px
+
+                                    span
+                                        color: $gray
+
+                                        small
+                                            color: $gray-light
+                                            text-decoration: line-through
+
+                            &.detail
+                                table
+                                    tr
+                                        &:last-of-type
+
+                                            td
+                                                &:last-of-type
+                                                    text-align: right
+
+                                                    a
+                                                        font-family: "Roboto", sans-serif
+                                                        font-size: 0.75rem
+
+                                                        color: $gray
+
+                            &.desc
+                                button
+                                    width: 100%
+
+                                p
+                                    a
+                                        color: $primary
+
+                            &.share
+                                a
+                                    color: $gray
+
+                                    &:hover
+                                        color: $primary
+
+        &#related
+            padding-top: 50px
+            padding-bottom: 50px
+
+            .row
+                .item
+                    .image
+                        width: 100%
+                        height: 50vh
+
+                        position: relative
+
+                        .mask
+                            width: 80%
+                            height: 100%
+
+                            img
+                                @include transition(300ms)
+
+                        .name
+                            width: 100%
+                            height: 50px
+
+                            position: absolute
+                            top: 0
+                            left: 100%
+
+                            color: $gray-light
+
+                            @include rotateZ(90deg, top, left)
+
+                    .content
+                        padding-top: 15px
+
+                        h4
+                            a
+                                color: $gray
+
+                                &:hover
+                                    color: $primary
+                                    text-decoration: none
+
+                        h6
+                            color: #ccc
+                            font-family: "Roboto", sans-serif
+
+                        .price
+                            font-family: "Roboto", sans-serif
+                            font-size: 1.125rem
+
+                            span
+                                display: block
+
+                                color: $gray
+
+                                small
+                                    color: $gray-light
+                                    text-decoration: line-through
+
+                    &:hover
+                        .mask
+                            img
+                                @include scale(1.1, 1.1)
+                                @include transition(300ms)
+
+@media (max-width: 992px) and (min-width: 768px)
+    #products
+        .content
+            .row
+                .left
+                    order: 2
+
+                .right
+                    order: 1
+
+    #detail-product
+        .container
+            &#detail
+                padding-top: 10vh
+
+@media (max-width: 768px)
+    #products
+        .content
+            .row
+                .left
+                    order: 2
+
+                .right
+                    order: 1
+
+                    .grid
+                        .grid-sizer, .grid-item
+                            width: 100%
+
+    #detail-product
+        .container
+            &#detail
+                padding-top: 10vh
+

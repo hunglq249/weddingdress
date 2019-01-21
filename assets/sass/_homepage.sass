@@ -1,0 +1,396 @@
+#homepage
+    padding-left: 30px
+    padding-right: 30px
+
+    .container-fluid
+        &.slider
+            height: 100vh
+
+            padding: 30px 0
+
+            #slider
+                height: 100%
+
+                .carousel-inner
+                    height: 100%
+
+                    .carousel-item
+                        height: 100%
+
+                        .mask
+                            width: 100%
+                            height: 100%
+
+                        .content
+                            position: absolute
+                            top: 50%
+                            left: 50%
+
+                            width: 50vw
+
+                            @include translate(-25%, -25%)
+
+                            color: #fff
+                            text-shadow: 2px 2px 7px rgba(0,0,0,0.5)
+
+                            h1
+                                position: relative
+
+                                .line
+                                    position: absolute
+                                    top: 50%
+                                    left: -22%
+
+                                    width: 20%
+                                    height: 2px
+                                    background-color: #fff
+
+
+                            .row
+                                margin-top: 30px
+                                margin-bottom: 30px
+
+                            .btn
+                                color: #fff
+
+        &.ads-short
+
+        &.new-arrivals
+            margin-bottom: 30px
+
+            height: 55vh
+
+            .row
+                height: 100%
+
+                .left
+                    padding-left: 0
+                    padding-right: 0
+
+                    .mask
+                        width: 100%
+                        height: 100%
+
+                        position: relative
+
+                        .content
+                            position: absolute
+                            top: 50%
+                            left: 50%
+
+                            @include translate(-50%, -50%)
+
+                            color: #fff
+
+                            text-align: center
+
+                            h2
+                                font-size: 3rem
+
+                                span
+                                    font-size: 2rem
+
+
+
+                .right
+                    padding-left: 0
+                    padding-right: 0
+
+                    #arrivals
+                        height: 100%
+
+                        .carousel-inner
+                            height: 100%
+
+                            .carousel-item
+                                height: 100%
+
+                                .mask
+                                    width: 100%
+                                    height: 100%
+
+                                .overlay
+                                    position: absolute
+                                    top: 0
+                                    left: 0
+
+                                    width: 100%
+                                    height: 100%
+
+                                    padding-left: 70px
+                                    padding-right: 70px
+
+                                    background-color: rgba(255,208,208,0.65)
+
+                                    display: flex
+
+                                    align-items: center
+
+                                    .content
+                                        color: #fff
+
+                                        h6
+                                            margin-bottom: 0
+                                            font-size: 1rem
+
+                                        h3
+                                            font-weight: 700
+                                            font-size: 3rem
+
+                                        p
+                                            margin-bottom: 30px
+
+                                        .btn
+                                            &.btn-outline
+                                                color: #fff
+
+        &.ads-md
+
+        &.special
+            margin-bottom: 30px
+
+            .heading
+                width: 100%
+
+                text-align: center
+
+                h1
+                    font-weight: 700
+                    font-size: 2.25rem
+
+                    color: $gray
+
+                    margin-bottom: 50px
+
+            .body
+                .owl-carousel
+                    .item
+                        @include transition(300ms)
+
+                        a
+                            text-decoration: none
+
+                        .mask
+                            width: 100%
+                            height: 50vh
+
+                        .content
+                            padding-top: 30px
+                            padding-bottom: 50px
+
+                            text-align: center
+
+                            h5
+                                color: $gray
+
+                            h6
+                                font-family: "Roboto", sans-serif
+                                font-size: 1rem
+
+                                color: $gray-light
+
+                        &:hover
+                            @include translate(0, -15px)
+
+                            @include transition(300ms)
+
+                    .owl-dots
+                        counter-reset: dots
+                        text-align: center
+
+                        button
+                            &.owl-dot
+                                width: 20px
+                                height: 10px
+
+                                margin-left: 7px
+                                margin-right: 7px
+
+                                &.active
+                                    &:before
+                                        font-weight: bold
+                                        color: $primary
+
+                                        padding-bottom: 3px
+                                        border-bottom: 2px solid $primary
+
+                                &:before
+                                    font-family: "Roboto", sans-serif
+                                    color: $gray-light
+
+                                    counter-increment: dots
+                                    content: counter(dots)
+
+                            span
+                                width: 20px
+                                height: 10px
+
+        &.story
+            margin-bottom: 30px
+
+            .heading
+                width: 100%
+
+                text-align: center
+
+                h1
+                    font-weight: 700
+                    font-size: 2.25rem
+
+                    color: $gray
+
+                    margin-bottom: 50px
+
+            .body
+                .row
+                    .item
+                        .top
+                            width: 100%
+                            height: 40vh
+
+                            position: relative
+
+                            .mask
+                                width: 60%
+                                height: 100%
+
+                                position: absolute
+                                top: 0
+                                left: 0
+
+                                @include transition(300ms)
+
+                            .content
+                                width: 50%
+
+                                padding-right: 30px
+
+                                position: absolute
+                                top: 20%
+                                left: 50%
+
+                                @include transition(300ms)
+
+                                h6
+                                    margin-bottom: 0
+
+                                    color: $gray-dark
+
+                                h3
+                                    color: $gray-dark
+
+                                    &.text-wrapper
+                                        height: 6.3rem
+                                        -webkit-line-clamp: 3
+
+                                a
+                                    &:hover
+                                        text-decoration: none
+
+                        .bottom
+                            padding-top: 30px
+                            padding-bottom: 30px
+
+                            .line
+                                width: 75px
+                                height: 3px
+
+                                background-color: #979797
+
+                                margin-bottom: 15px
+
+                            p
+                                color: $gray-light
+
+                        &:hover
+                            .top
+                                .mask
+                                    left: 5%
+
+                                    @include transition(300ms)
+
+                                .content
+                                    left: 45%
+                                    @include transition(300ms)
+
+            .foot
+                text-align: center
+
+        &.connection
+            width: 100%
+
+            text-align: center
+
+            margin-bottom: 30px
+
+            h1
+                font-weight: 700
+                font-size: 2.25rem
+
+                color: $gray
+
+                margin-bottom: 15px
+
+            .line
+                width: 500px
+                height: 2px
+
+                margin: 0 auto 15px
+
+                background-color: $gray-light
+
+            ul
+                padding-left: 0
+
+                list-style: none
+
+                li
+                    display: inline-block
+
+                    margin: 0 7px
+
+                    font-size: 1.25rem
+
+                    a
+                        color: $gray
+
+                        &:hover
+                            color: $primary
+
+@media (max-width: 1024px) and (min-width: 768px)
+    #homepage
+        padding-left: 15px
+        padding-right: 15px
+
+@media (max-width: 768px)
+    #homepage
+        padding-left: 0
+        padding-right: 0
+
+        .container-fluid
+            &.slider
+                padding: 0
+
+                #slider
+                    .carousel-inner
+                        .carousel-item
+                            .content
+                                @include translate(-50%, -25%)
+
+                                p
+                                    display: none
+
+            &.new-arrivals
+                height: auto
+
+                .row
+                    height: auto
+
+                    .left, .right
+                        height: 50vh
+
+                    .right
+                        #arrivals
+                            .content
+                                p
+                                    display: none

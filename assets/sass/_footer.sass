@@ -1,0 +1,133 @@
+footer
+    .container-fluid
+        &.top
+            padding: 50px 0
+
+            background-color: $primary
+
+            .container
+                .row
+                    .item
+                        h6
+                            font-weight: bold
+                            font-size: 1.25rem
+
+                            color: #fff
+
+                            margin-bottom: 30px
+
+                        ul
+                            padding-left: 0
+                            list-style: none
+
+                            li
+                                a
+                                    color: #fff
+
+                                    &:hover
+                                        text-decoration: none
+
+        &.bottom
+            padding-top: 30px
+
+            .container
+
+                &:first-of-type
+                    padding-bottom: 30px
+                    border-bottom: 1px solid $gray-light
+
+                    nav
+                        display: flex
+                        flex-direction: row
+
+                        align-items: center
+
+                        .nav-brand
+
+                        .nav-main
+                            display: flex
+                            flex-direction: row
+
+                            justify-content: space-between
+
+                            ul
+                                padding-left: 0
+                                margin-bottom: 0
+
+                                list-style: none
+
+                                li
+                                    display: inline-block
+
+                                    padding-left: 7px
+                                    padding-right: 7px
+
+                                    a
+                                        color: $gray
+
+                                        &:hover
+                                            color: $primary
+
+                &:last-of-type
+                    display: flex
+                    flex-direction: row
+
+                    justify-content: space-between
+                    align-items: center
+
+                    padding-top: 15px
+                    padding-bottom: 15px
+
+                    p
+                        font-family: "Roboto", sans-serif
+                        color: $gray-light
+
+@media (max-width: 992px)
+    footer
+        .container-fluid
+            &.bottom
+                .container
+                    &:first-of-type
+
+                        nav
+                            display: flex
+                            flex-direction: column
+
+                            align-items: flex-start
+
+                            .nav-brand
+                                margin-bottom: 30px
+
+                            .nav-main
+                                display: flex
+                                flex-direction: column
+
+                                ul
+                                    padding-left: 0
+                                    margin-bottom: 0
+
+                                    list-style: none
+
+                                    li
+                                        display: list-item
+
+                                        padding-left: 0px
+                                        padding-right: 0px
+
+                                        margin-bottom: 7px
+
+                                        a
+                                            color: $gray
+
+                                            &:hover
+                                                color: $primary
+
+                    &:last-of-type
+                        display: flex
+                        flex-direction: column
+
+                        justify-content: initial
+                        align-items: left
+
+                        padding-top: 15px
+                        padding-bottom: 15px

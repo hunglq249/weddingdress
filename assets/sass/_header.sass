@@ -1,0 +1,254 @@
+header
+    width: 100vw
+
+    padding: 60px
+
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 1050
+
+    @include transition(300ms)
+
+    nav
+        display: flex
+        flex-direction: row
+
+        justify-content: space-between
+        align-items: center
+
+        .nav-item
+            &.nav-brand
+                a
+                    color: $primary
+
+                    iframe
+                        width: 164px
+                        height: 40px
+
+            &.nav-main
+                ul
+                    padding-left: 0
+
+                    margin-bottom: 0
+
+                    li
+                        display: inline-block
+
+                        padding-left: 7px
+                        padding-right: 7px
+
+                        a
+                            color: $gray
+
+                            font-weight: 700
+
+                            &:hover
+                                text-decoration: none
+
+                        &.li-lang
+                            display: none
+
+            &.nav-lang
+                ul
+                    list-style: none
+
+                    margin-bottom: 0
+
+                    li
+                        display: inline-block
+
+                        a
+                            color: $gray
+
+                        &:first-of-type
+                            padding-right: 7px
+
+                            border-right: 1px solid $gray
+
+    &.active
+        padding: 15px 60px
+
+        background-color: $primary
+
+        @include transition(300ms)
+
+        .nav-item
+            &.nav-brand
+                a
+                    color: #fff
+
+            &.nav-main
+                ul
+                    li
+                        a
+                            color: #fff
+
+            &.nav-lang
+                ul
+                    li
+                        a
+                            color: #fff
+
+                        &:first-of-type
+                            border-right: 1px solid #fff
+
+            &.nav-btn
+                .btn
+                    border: 1px solid #fff
+
+    &.light
+        nav
+            .nav-item
+                &.nav-main
+                    ul
+                        li
+                            a
+                                color: #fff
+
+                &.nav-lang
+                    ul
+                        li
+                            a
+                                color: #fff
+
+                            &:first-of-type
+                                border-right: 1px solid #fff
+
+@media (max-width: 992px)
+    header
+        padding: 30px
+
+        nav
+            .nav-item
+                &.nav-main
+                    ul
+                        li
+                            &.li-lang
+                                display: block
+
+                    #expand-nav
+                        #btn-nav-expand
+
+                            @include transition(300ms)
+
+                            span
+                                &.nav-icon
+                                    width: 30px
+                                    height: 5px
+
+                                    background-color: $gray
+
+                                    display: block
+
+                                    position: relative
+
+                                    @include transition(300ms)
+
+                                    &:before, &:after
+                                        content: ''
+                                        display: block
+                                        width: 30px
+                                        height: 5px
+                                        background-color: $gray
+                                        position: absolute
+
+                                        @include transition(300ms)
+
+                                    &:before
+                                        margin-top: -10px
+
+                                    &:after
+                                        margin-top: 10px
+
+                            &.active
+                                @include transition(300ms)
+
+                                span
+                                    &.nav-icon
+                                        background-color: transparent
+
+                                        &:before
+                                            margin-top: 0
+                                            transform: rotate(45deg)
+
+                                        &:after
+                                            margin-top: 0
+                                            transform: rotate(-45deg)
+
+                    ul
+                        position: absolute
+                        top: 100%
+                        left: 100%
+
+                        width: 100%
+
+                        padding: 50px 30px
+
+                        background-color: #fff
+
+                        list-style: none
+
+                        @include transition(300ms)
+
+                        li
+                            padding-top: 7px
+                            padding-bottom: 15px
+
+                            border-bottom: 1px solid $gray-light
+
+                            a
+                                color: $gray-light
+
+                            &:last-of-type
+                                border-bottom: none
+
+                        &.active
+                            left: 0%
+
+                            @include transition(300ms)
+
+                            li
+                                display: list-item
+
+                &.nav-btn
+                    display: none
+
+                &.nav-lang
+                    display: none
+
+        &.light
+            nav
+                .nav-item
+                    &.nav-main
+                        ul
+                            li
+                                a
+                                    color: $gray
+
+                        #expand-nav
+                            #btn-nav-expand
+                                span
+                                    &.nav-icon
+                                        background-color: #fff
+
+                                        &:before, &:after
+                                            background-color: #fff
+
+        &.active
+            nav
+                .nav-item
+                    &.nav-main
+                        ul
+                            li
+                                a
+                                    color: $gray
+
+                        #expand-nav
+                            #btn-nav-expand
+                                span
+                                    &.nav-icon
+                                        background-color: #fff
+
+                                        &:before, &:after
+                                            background-color: #fff

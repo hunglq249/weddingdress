@@ -1,0 +1,68 @@
+// TRANSITION
+
+@mixin transition($duration)
+    -webkit-transition: all ease-in-out $duration
+    -moz-transition: all ease-in-out $duration
+    -ms-transition: all ease-in-out $duration
+    -o-transition: all ease-in-out $duration
+    transition: all ease-in-out $duration
+
+
+// TRANSLATE
+
+@mixin translate($directionX, $directionY)
+    -webkit-transform: translate($directionX, $directionY)
+    -moz-transform: translate($directionX, $directionY)
+    -ms-transform: translate($directionX, $directionY)
+    -o-transform: translate($directionX, $directionY)
+    transform: translate($directionX, $directionY)
+
+// SCALE
+
+@mixin scale($x-ratio, $y-ratio)
+    -webkit-transform: scale($x-ratio, $y-ratio)
+    -moz-transform: scale($x-ratio, $y-ratio)
+    -ms-transform: scale($x-ratio, $y-ratio)
+    -o-transform: scale($x-ratio, $y-ratio)
+    transform: scale($x-ratio, $y-ratio)
+
+// ROTATE
+
+@mixin rotateX($x-deg, $horizontal, $vertical)
+    -webkit-transform: rotateX($x-deg)
+    -moz-transform: rotateX($x-deg)
+    -ms-transform: rotateX($x-deg)
+    -o-transform: rotateX($x-deg)
+    transform: rotateX($x-deg)
+
+    -webkit-transform-origin: $horizontal $vertical
+    -moz-transform-origin: $horizontal $vertical
+    -ms-transform-origin: $horizontal $vertical
+    -o-transform-origin: $horizontal $vertical
+    transform-origin: $horizontal $vertical
+
+@mixin rotateY($y-deg, $horizontal, $vertical)
+    -webkit-transform: rotateY($y-deg)
+    -moz-transform: rotateY($y-deg)
+    -ms-transform: rotateY($y-deg)
+    -o-transform: rotateY($y-deg)
+    transform: rotateY($y-deg)
+
+    -webkit-transform-origin: $horizontal $vertical
+    -moz-transform-origin: $horizontal $vertical
+    -ms-transform-origin: $horizontal $vertical
+    -o-transform-origin: $horizontal $vertical
+    transform-origin: $horizontal $vertical
+
+@mixin rotateZ($z-deg, $horizontal, $vertical)
+    -webkit-transform: rotateZ($z-deg)
+    -moz-transform: rotateZ($z-deg)
+    -ms-transform: rotateZ($z-deg)
+    -o-transform: rotateZ($z-deg)
+    transform: rotateZ($z-deg)
+
+    -webkit-transform-origin: $horizontal $vertical
+    -moz-transform-origin: $horizontal $vertical
+    -ms-transform-origin: $horizontal $vertical
+    -o-transform-origin: $horizontal $vertical
+    transform-origin: $horizontal $vertical
