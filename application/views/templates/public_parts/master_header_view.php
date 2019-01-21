@@ -34,9 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="nav-brand nav-item">
 			<a href="<?php echo base_url('') ?>">
 				<!--<img src="<?php echo site_url('assets/img/') ?>logo-w.svg" alt="logo Ciel de Gia">-->
-				<iframe src="<?php echo site_url('assets/img/') ?>logo-w.svg">
-					Your browser does not support iframes
-				</iframe>
+				<div class="logo"></div>
 			</a>
 		</div>
 

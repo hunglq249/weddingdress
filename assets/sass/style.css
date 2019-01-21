@@ -54,9 +54,12 @@ header {
     align-items: center; }
     header nav .nav-item.nav-brand a {
       color: #FFD0D0; }
-      header nav .nav-item.nav-brand a iframe {
+      header nav .nav-item.nav-brand a .logo {
         width: 164px;
-        height: 40px; }
+        height: 40px;
+        background-image: url("../img/logo.svg");
+        background-repeat: no-repeat;
+        background-size: contain; }
     header nav .nav-item.nav-main ul {
       padding-left: 0;
       margin-bottom: 0; }
@@ -89,8 +92,8 @@ header {
     -ms-transition: all ease-in-out 300ms;
     -o-transition: all ease-in-out 300ms;
     transition: all ease-in-out 300ms; }
-    header.active .nav-item.nav-brand a {
-      color: #fff; }
+    header.active .nav-item.nav-brand a .logo {
+      background-image: url("../img/logo-w.svg"); }
     header.active .nav-item.nav-main ul li a {
       color: #fff; }
     header.active .nav-item.nav-lang ul li a {
