@@ -511,10 +511,17 @@
     }
 </script>
 <script>
+	switch(window.location.origin){
+	    case 'http://cieldegia.com/':
+	        var HOSTNAME = 'http://cieldegia.com/';
+	        break;
+	    default:
+	        var HOSTNAME = 'http://localhost/weddingdress/';
+	}
     $(".change-language").click(function(){
         $.ajax({
             method: "GET",
-            url: "http://localhost/weddingdress/homepage/change_language",
+            url: HOSTNAME + "homepage/change_language",
             data: {
                 lang: $(this).data('language')
             },

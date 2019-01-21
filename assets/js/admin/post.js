@@ -1,6 +1,6 @@
 switch(window.location.origin){
-    case 'http://diamondtour.vn':
-        var HOSTNAME = 'http://diamondtour.vn/';
+    case 'http://cieldegia.com':
+        var HOSTNAME = 'http://cieldegia.com/';
         break;
     default:
         var HOSTNAME = 'http://localhost/weddingdress/';
