@@ -22,9 +22,13 @@ header
                 a
                     color: $primary
 
-                    iframe
+                    .logo
                         width: 164px
                         height: 40px
+
+                        background-image: url("../img/logo.svg")
+                        background-repeat: no-repeat
+                        background-size: contain
 
             &.nav-main
                 ul
@@ -76,7 +80,9 @@ header
         .nav-item
             &.nav-brand
                 a
-                    color: #fff
+                    .logo
+                        background-image: url("../img/logo-w.svg")
+
 
             &.nav-main
                 ul
