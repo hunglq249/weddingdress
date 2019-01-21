@@ -1,13 +1,13 @@
 switch(window.location.origin){
-    case 'http://diamondtour.vn':
-        var HOSTNAME = 'http://diamondtour.vn/';
+    case 'http://cieldegia.com':
+        var HOSTNAME = 'http://cieldegia.com/';
         break;
     default:
         var HOSTNAME = 'http://localhost/weddingdress/';
 }
 switch(window.location.origin){
-    case 'http://diamondtour.vn':
-        var HOSTNAMEADMIN = 'http://diamondtour.vn/admin';
+    case 'http://cieldegia.com':
+        var HOSTNAMEADMIN = 'http://cieldegia.com/admin';
         break;
     default:
         var HOSTNAMEADMIN = 'http://localhost/weddingdress/admin';

@@ -3,8 +3,8 @@ for (var i = 0; i < document.querySelectorAll('[id^="demo"]').length; i++) {
     document.querySelectorAll(`[data-target^="#demo"] b`)[i].innerHTML = value;
 }
 switch(window.location.origin){
-    case 'http://diamondtour.vn':
-        var HOSTNAMEADMIN = 'http://diamondtour.vn/admin';
+    case 'http://cieldegia.com':
+        var HOSTNAMEADMIN = 'http://cieldegia.com/admin';
         break;
     default:
         var HOSTNAMEADMIN = 'http://localhost/weddingdress/admin';
