@@ -82,6 +82,9 @@ function active(controller, id, question) {
                         case 'banner' :
                             alert('Bật banner thành công');
                             break;
+                        case 'question' :
+                            alert('Bật thành công');
+                            break;
                         default :
                             alert('Bật danh mục thành công');
                             break;

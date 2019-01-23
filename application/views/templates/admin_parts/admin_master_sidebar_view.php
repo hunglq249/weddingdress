@@ -69,6 +69,11 @@
                     </a>
                 </li>
                 <li class="active">
+                    <a href="<?php echo base_url('admin/question') ?>">
+                        <i class="fa fa-inbox"></i> <span>Question</span>
+                    </a>
+                </li>
+                <li class="active">
                     <a href="<?php echo base_url('admin/collection') ?>">
                         <i class="fa fa-inbox"></i> <span>Bộ sưu tập</span>
                     </a>
