@@ -98,7 +98,9 @@ class Question_model extends MY_Model{
             $this->db->where($this->table .'.id >', 0);
         }
         // $this->db->where("product.price REGEXP '(.)*".'(")'."(1[5-8][0-9]{4}|19[0-8][0-9]{3}|199[0-8][0-9]{2}|1999[0-8][0-9]|19999[0-9]|2[0-9]{5}|300000)".'(")'."(.)*'"); //test có code js built REGEXP
-        $this->db->limit($limit, $start);
+        if($limit != NULL && $start != NULL){
+            $this->db->limit($limit, $start);
+        }
         $this->db->group_by($this->table_lang .'.'. $this->table .'_id');
         $this->db->order_by($this->table .".id", $order);
 
